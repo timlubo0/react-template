@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { rankItem, rankings } from '@tanstack/match-sorter-utils';
 import type { RankingInfo } from '@tanstack/match-sorter-utils';
 import type { Row } from '@tanstack/react-table';
