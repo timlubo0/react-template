@@ -36,15 +36,13 @@ function NewMessageModal({ isOpen, onClose }: Props){
                 // rome-ignore lint/suspicious/noExplicitAny: <explanation>
                 contactsQuery.data.map((contact: any) => {
 
-                   if(contact.number === '243978915686'){
-                        const message = {
-                            to: contact.number,
-                            caption: data?.message,
-                            image: response.success
-                        };
-            
-                        messageMutation.mutate(message);
-                   }
+                    const message = {
+                        to: contact.number,
+                        caption: data?.message,
+                        image: response.success
+                    };
+        
+                    messageMutation.mutate(message);
 
                 });
 
@@ -54,6 +52,7 @@ function NewMessageModal({ isOpen, onClose }: Props){
                     status: 'success',
                     duration: 9000,
                     isClosable: true,
+                    position: 'top-right'
                 });
 
                 onClose();

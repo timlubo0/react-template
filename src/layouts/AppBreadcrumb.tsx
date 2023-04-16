@@ -20,11 +20,11 @@ function AppBreadCrumb(){
                 </BreadcrumbItem>
                 <BreadcrumbItem>
                     <BreadcrumbLink as={Link} href='#'>
-                    About
+                    Messages
                     </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbItem isCurrentPage>
-                    <BreadcrumbLink>Contact</BreadcrumbLink>
+                    <BreadcrumbLink>List</BreadcrumbLink>
                 </BreadcrumbItem>
             </Breadcrumb>
         </Flex>

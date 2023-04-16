@@ -27,7 +27,7 @@ function MessagesScreen(){
         <Flex mx={2} my={5} justifyContent={"space-between"}>
           <Input
             type="text"
-            placeholder="search...."
+            placeholder="Rechercher (fonctionnalité en developpement)...."
             maxW={500}
             size={"sm"}
           />
