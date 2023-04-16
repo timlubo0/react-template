@@ -8,7 +8,7 @@ export const authService = {
     login: (credentials: LoginBody) => {
         const { username, password } = credentials;
 
-        const status = username === 'admin@synergie-solution.com' && password === 'uL@23sms!';
+        const status = username === 'admin' && password === '1234';
 
         status && sessionStorage.setItem('access_token', 'uL@23sms!uL@23sms!uL@23sms!uL@23sms!uL@23sms!');
 

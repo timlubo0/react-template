@@ -15,7 +15,7 @@ function LoginScreen(){
         const login = authService.login(credentials);
 
         if(login.status ){
-            router.push(Routes.home);
+            router.push(Routes.messages);
 
             return null;
         }
