@@ -1,4 +1,3 @@
-
 export type LoginBody = {
     username: string;
     password: string;
@@ -15,5 +14,9 @@ export const authService = {
         return{
             status: status
         }
+    },
+
+    logout: () => {
+        sessionStorage.removeItem("access_token");
     }
 }

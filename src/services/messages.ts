@@ -2,19 +2,19 @@ import API from "@/api/api";
 import { endpoints } from "@/api/endpoints";
 
 export interface MessageBody{
-    to: string;
-    message?: string;
-    image?: string;
-    file?: File;
-    caption?: string;
+  to: string;
+  message?: string;
+  image?: string;
+  file?: File;
+  caption?: string;
 }
 
 export type MessagesFnProps = {
-    token: string;
-    page: number;
-    limit: number;
-    status: string;
-    sort: string;
+  token: string;
+  page: number;
+  limit: number;
+  status: string;
+  sort: string;
 }
 
 const api = new API();

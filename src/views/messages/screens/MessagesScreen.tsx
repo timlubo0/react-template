@@ -1,5 +1,4 @@
 import React from "react";
-import AppLayout from "@/layouts/AppLayout";
 import MessagesTable from "../components/table/MessagesTable";
 import { Flex, Input, Button, Box, useDisclosure } from "@chakra-ui/react";
 import NewMessageModal from "../components/modals/NewMessageModal";
@@ -18,33 +17,31 @@ function MessagesScreen(){
   });
 
   return (
-    <AppLayout>
-      <Box>
-        <NewMessageModal
-          isOpen={newMessageModal.isOpen}
-          onClose={newMessageModal.onClose}
+    <Box>
+      <NewMessageModal
+        isOpen={newMessageModal.isOpen}
+        onClose={newMessageModal.onClose}
+      />
+      <Flex mx={2} my={5} justifyContent={"space-between"}>
+        <Input
+          type="text"
+          placeholder="Rechercher (fonctionnalité en developpement)...."
+          maxW={500}
+          size={"sm"}
         />
-        <Flex mx={2} my={5} justifyContent={"space-between"}>
-          <Input
-            type="text"
-            placeholder="Rechercher (fonctionnalité en developpement)...."
-            maxW={500}
-            size={"sm"}
-          />
-          <Button
-            size={"sm"}
-            bg={"#000"}
-            color={"#fff"}
-            onClick={newMessageModal.onOpen}
-          >
-            Nouveau message
-          </Button>
-        </Flex>
-        {
-          !messagesQuery.isLoading && <MessagesTable messages={messagesQuery.messages} />
-        }
-      </Box>
-    </AppLayout>
+        <Button
+          size={"sm"}
+          bg={"#000"}
+          color={"#fff"}
+          onClick={newMessageModal.onOpen}
+        >
+          Nouveau message
+        </Button>
+      </Flex>
+      {
+        !messagesQuery.isLoading && <MessagesTable messages={messagesQuery.messages} />
+      }
+    </Box>
   );
 }
 

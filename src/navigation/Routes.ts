@@ -3,4 +3,8 @@ export const Routes = {
     home: "#",
     messages: "/messages",
 };
+
+export const publicRoutes = [
+    Routes.login,
+];
   

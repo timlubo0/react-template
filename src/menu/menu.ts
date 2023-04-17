@@ -18,16 +18,16 @@ export const MENU: Array<NavItem> = [
         label: 'Parametres',
         href: '#',
         children: [
-        {
-            label: 'Roles & Permissions',
-            subLabel: 'Gestion des acces',
-            href: '#',
-        },
-        {
-            label: 'Utilisateurs',
-            subLabel: 'gestion des users',
-            href: '#',
-        },
+            {
+                label: 'Roles & Permissions',
+                subLabel: 'Gestion des acces',
+                href: '#',
+            },
+            {
+                label: 'Utilisateurs',
+                subLabel: 'gestion des users',
+                href: '#',
+            },
         ],
     },
 ];

@@ -15,7 +15,7 @@ function MessagesTable({ messages }: Props){
 
   const contactsQuery = useContacts();
   // rome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const  getContact = (id: string) => contactsQuery.data.find((contact: any) => contact.id === id);
+  const  getContact = (id: string) => contactsQuery.data?.find((contact: any) => contact.id === id);
 
   const cols = React.useMemo<ColumnDef<Message>[]>(
     () => [

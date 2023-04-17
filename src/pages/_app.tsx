@@ -11,29 +11,17 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
-import { useRouter } from 'next/router';
-import { useAuth } from '@/hooks/auth';
-import { Routes } from '../navigation/Routes';
-
+import RouteGuard from '../navigation/RouteGuard';
 
 const queryClient = new QueryClient();
         
 export default function App({ Component, pageProps }: AppProps) {
-
-  const router = useRouter();
-  const login = useAuth();
-
-  React.useEffect(() => { 
-    if(!login.isLoggedIn){
-      router.push(Routes.login);
-    } 
-  }, [router.pathname, login.isLoggedIn]);
-
-
   return (
     <ChakraProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <RouteGuard>
+          <Component {...pageProps} />
+        </RouteGuard>
       </QueryClientProvider>
     </ChakraProvider>
   )
