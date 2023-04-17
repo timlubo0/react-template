@@ -27,18 +27,19 @@ export default function AppLayout({ children }: { children: ReactNode }) {
   }, [router.pathname]);
 
   if(!showAppLayout) return <>{children}</>;
+  
 
   return (
     <Box>
       <Flex
         bg={"#000"}
-        color={useColorModeValue('gray.600', 'white')}
+        color={"gray.600"}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
+        borderColor={"gray.200"}
         align={'center'}>
         <Flex
           flex={{ base: 1, md: 'auto' }}
